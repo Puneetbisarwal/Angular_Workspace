@@ -12,7 +12,7 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 })
 export class UserComponent {
   
-  SelectUser = DUMMY_USERS[randomIndex];
+  selectUser = DUMMY_USERS[randomIndex];
 
 
 }
