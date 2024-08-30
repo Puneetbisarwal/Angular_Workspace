@@ -19,7 +19,9 @@ export class ServerStatusComponent implements OnInit {
   currentStatus = signal<'online' | 'offline' | 'unknown'>('offline');
   private destroyRef = inject(DestroyRef);
 
-  constructor() {}
+  constructor() {
+    console.log(this.currentStatus());
+  }
 
   ngOnInit() {
     console.log('ON INIT');
