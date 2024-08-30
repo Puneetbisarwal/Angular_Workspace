@@ -13,7 +13,6 @@ import { ControlComponent } from "../../../shared/control/control.component";
 })
 export class NewTicketComponent {
   onSubmit(titleElement: HTMLInputElement) {
-    const enteredTitle = titleElement.value;
-    console.log('ENTERED TITLE: ' + enteredTitle);
+    console.log(titleElement);
   }
 }
