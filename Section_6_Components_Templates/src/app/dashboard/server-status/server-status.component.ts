@@ -20,7 +20,9 @@ export class ServerStatusComponent implements OnInit {
   private destroyRef = inject(DestroyRef);
 
   constructor() {
-    console.log(this.currentStatus());
+    effect(() => {
+      console.log(this.currentStatus());
+    });
   }
 
   ngOnInit() {
