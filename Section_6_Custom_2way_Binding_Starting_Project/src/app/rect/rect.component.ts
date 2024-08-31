@@ -10,7 +10,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class RectComponent {
   // Todo: Implement custom two-way binding
   @Input({ required: true }) size!: { width: string; height: string };
-  @Output() sizeChange = new EventEmitter<{ width: string; height: string }>();
 
   onReset() {
     // ...
