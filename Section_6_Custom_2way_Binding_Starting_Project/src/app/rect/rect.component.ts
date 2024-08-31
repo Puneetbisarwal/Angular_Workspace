@@ -14,9 +14,5 @@ export class RectComponent {
 
   onReset() {
     // ...
-    this.sizeChange.emit({
-      width: '200',
-      height: '100'
-    });
   }
 }
