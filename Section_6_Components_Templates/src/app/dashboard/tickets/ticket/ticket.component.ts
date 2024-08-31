@@ -11,5 +11,10 @@ import { type Ticket } from '../ticket.model';
 })
 export class TicketComponent {
   data = input.required<Ticket>();
+  detailsVisible = signal(false);
 
+  onToggleDetails() {
+    // this.detailsVisible.set(!this.detailsVisible());
+    this.detailsVisible.update((wasVisible) => !wasVisible);
+  }
 }
