@@ -8,14 +8,14 @@ import { Directive, input } from '@angular/core';
   },
 })
 export class SafeLinkDirective {
-    queryParam = input('myapp');
+    queryParam = input('myapp', { alias: 'appSafeLink' });
+    
+    constructor() {
+        console.log('SafeLinkDirective is active!');
+      }
 
-  constructor() {
-    console.log('SafeLinkDirective is active!');
-  }
-
-  onConfirmLeavePage(event: MouseEvent) {
-    const wantsToLeave = window.confirm('Do you want to leave the app?');
+    onConfirmLeavePage(event: MouseEvent) {
+        const wantsToLeave = window.confirm('Do you want to leave the app?');
 
     if (wantsToLeave) {
         const address = (event.target as HTMLAnchorElement).href;
